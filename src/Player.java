@@ -1,5 +1,5 @@
 public class Player {
-    private Color color;
+    private PlayerColor color;
     private String name;
     public int elo;
     public String ip;
@@ -9,7 +9,7 @@ public class Player {
     public int losses;
     public int draws;
 
-    public Player(Color color, String name, int elo, String ip, int port, int id, int wins, int losses, int draws) {
+    public Player(PlayerColor color, String name, int elo, String ip, int port, int id, int wins, int losses, int draws) {
         this.color = color;
         this.name = name;
         this.elo = elo;

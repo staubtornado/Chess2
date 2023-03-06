@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 
 public class Figure {
-    private final Color color;
+    private final PlayerColor color;
     private String identifier;
     private char symbol;
     private int x;
     private int y;
 
 
-    public Figure(Color color, String name, char symbol, int x, int y) {
+    public Figure(PlayerColor color, String name, char symbol, int x, int y) {
         this.color = color;
         this.identifier = name;
         this.symbol = symbol;
@@ -17,7 +17,7 @@ public class Figure {
         this.y = y;
     }
 
-    public Color getColor() {
+    public PlayerColor getColor() {
         return this.color;
     }
 

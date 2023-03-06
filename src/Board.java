@@ -5,25 +5,25 @@ public class Board {
         this.board = new Figure[8][8];
 
         for (int i = 0; i < 8; i++) {
-            this.board[i][1] = new Figure(Color.BLACK, "Pawn", '♙', i, 1);
-            this.board[i][6] = new Figure(Color.WHITE, "Pawn", '♟', i, 6);
+            this.board[i][1] = new Figure(PlayerColor.BLACK, "Pawn", '♙', i, 1);
+            this.board[i][6] = new Figure(PlayerColor.WHITE, "Pawn", '♟', i, 6);
         }
-        this.board[0][0] = new Figure(Color.BLACK, "Rook", '♖', 0, 0);
-        this.board[7][0] = new Figure(Color.BLACK, "Rook", '♖', 7, 0);
-        this.board[0][7] = new Figure(Color.WHITE, "Rook", '♜', 0, 7);
-        this.board[7][7] = new Figure(Color.WHITE, "Rook", '♜', 7, 7);
-        this.board[1][0] = new Figure(Color.BLACK, "Knight", '♘', 1, 0);
-        this.board[6][0] = new Figure(Color.BLACK, "Knight", '♘', 6, 0);
-        this.board[1][7] = new Figure(Color.WHITE, "Knight", '♞', 1, 7);
-        this.board[6][7] = new Figure(Color.WHITE, "Knight", '♞', 6, 7);
-        this.board[2][0] = new Figure(Color.BLACK, "Bishop", '♗', 2, 0);
-        this.board[5][0] = new Figure(Color.BLACK, "Bishop", '♗', 5, 0);
-        this.board[2][7] = new Figure(Color.WHITE, "Bishop", '♝', 2, 7);
-        this.board[5][7] = new Figure(Color.WHITE, "Bishop", '♝', 5, 7);
-        this.board[3][0] = new Figure(Color.BLACK, "Queen", '♕', 3, 0);
-        this.board[3][7] = new Figure(Color.WHITE, "Queen", '♛', 3, 7);
-        this.board[4][0] = new Figure(Color.BLACK, "King", '♔', 4, 0);
-        this.board[4][7] = new Figure(Color.WHITE, "King", '♚', 4, 7);
+        this.board[0][0] = new Figure(PlayerColor.BLACK, "Rook", '♖', 0, 0);
+        this.board[7][0] = new Figure(PlayerColor.BLACK, "Rook", '♖', 7, 0);
+        this.board[0][7] = new Figure(PlayerColor.WHITE, "Rook", '♜', 0, 7);
+        this.board[7][7] = new Figure(PlayerColor.WHITE, "Rook", '♜', 7, 7);
+        this.board[1][0] = new Figure(PlayerColor.BLACK, "Knight", '♘', 1, 0);
+        this.board[6][0] = new Figure(PlayerColor.BLACK, "Knight", '♘', 6, 0);
+        this.board[1][7] = new Figure(PlayerColor.WHITE, "Knight", '♞', 1, 7);
+        this.board[6][7] = new Figure(PlayerColor.WHITE, "Knight", '♞', 6, 7);
+        this.board[2][0] = new Figure(PlayerColor.BLACK, "Bishop", '♗', 2, 0);
+        this.board[5][0] = new Figure(PlayerColor.BLACK, "Bishop", '♗', 5, 0);
+        this.board[2][7] = new Figure(PlayerColor.WHITE, "Bishop", '♝', 2, 7);
+        this.board[5][7] = new Figure(PlayerColor.WHITE, "Bishop", '♝', 5, 7);
+        this.board[3][0] = new Figure(PlayerColor.BLACK, "Queen", '♕', 3, 0);
+        this.board[3][7] = new Figure(PlayerColor.WHITE, "Queen", '♛', 3, 7);
+        this.board[4][0] = new Figure(PlayerColor.BLACK, "King", '♔', 4, 0);
+        this.board[4][7] = new Figure(PlayerColor.WHITE, "King", '♚', 4, 7);
     }
 
     public int[] size() {
@@ -54,7 +54,7 @@ public class Board {
         this.board[x2][y2].setY(y2);
 
         if (this.board[x2][y2].getIdentifier().equals("Pawn") && y2 == 7) {
-            char icon = this.board[x2][y2].getColor() == Color.WHITE ? '♛' : '♕';
+            char icon = this.board[x2][y2].getColor() == PlayerColor.WHITE ? '♛' : '♕';
             this.board[x2][y2].setIdentity("Queen", icon);
         }
 
